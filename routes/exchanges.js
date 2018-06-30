@@ -50,7 +50,11 @@ router.get('/check_prices', function(req, res) {
  */           
 router.get('/exchanges', function(req, res) {
   db.conn(function(db){
-    db.collection('exchanges').find({ user_name: req.query.user_name }).toArray(function(err, results) {
+    var filter = null;
+    if (req.query.user_name)
+      filter = { user_name: req.query.user_name };
+    
+    db.collection('exchanges').find(filter).toArray(function(err, results) {
       res.json(results);
     });
   });
