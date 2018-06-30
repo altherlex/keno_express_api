@@ -8,6 +8,7 @@ var createError = require('http-errors')
   , roundsRouter = require('./routes/rounds')
   , ticketsRouter = require('./routes/tickets')
   , drawningsRouter = require('./routes/drawnings')
+  , exchangesRouter = require('./routes/exchanges')
 
   , bodyParser = require('body-parser')
   , swagger = require('./')
@@ -55,7 +56,8 @@ app.use(swagger.init(app, {
   swaggerURL: '/swagger',
   swaggerJSON: '/api-docs.json',
   swaggerUI: './app/public/swagger/',
-  apis: ['routes/rounds.js', 'routes/tickets.js', 'routes/drawnings.js']
+  // apis: ['routes/rounds.js', 'routes/tickets.js', 'routes/drawnings.js']
+  apis: ['routes/exchanges.js']
 }));
 
 app.use(bodyParser.json()); // support json encoded bodies
@@ -65,6 +67,7 @@ app.use('/', roundsRouter);
 app.use('/', ticketsRouter);
 app.use('/', drawningsRouter);
 app.use('/', indexRouter);
+app.use('/', exchangesRouter);
 
 // error handler
 app.use(function(err, req, res, next) {

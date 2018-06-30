@@ -1,5 +1,25 @@
-# Keno Express API
+# Keno Express APP
 
+## Exnchange Challenge
+
+Purchasing Cryptocurrency
+
+- Create a simple web app, hosted at a URL we can visit
+- Users are presented with a form for purchasing cryptocurrency
+- The form should allow the user to choose to buy either Bitcoin or Ethereum
+- Users can either enter a CAD amount, or an amount of coins to buy, and click a buy button to perform the transaction
+- Transactions should be saved so that you can display a list of transactions the user has made, including the CAD price, the type of coin, and the number of coins purchased
+- You can fetch the current CAD ask price for Bitcoin using this API - https://api.quadrigacx.com/v2/ticker?book=btc_cad
+- And the current CAD ask price for Ethereum using this API - https://api.quadrigacx.com/v2/ticker?book=eth_cad
+- Please provide the source code via Github
+
+The exercise should only take a few hours, but you can have until next Monday to complete it. If you don’t finish all aspects of it within a few hours of work, that's fine. Feel free to use whichever language/technology/framework you prefer. If anything is unclear please just reach out and ask me! Once your done I’ll set up some time to have a chat with you about it and about Sagecoins.
+
+
+
+------
+
+## Lottery Challenge
 Requirements: Create an Express.js API that handles a request to play a simple keno game.
 
 
@@ -50,6 +70,7 @@ Or on Heroku: [keno-express-api](https://keno-express-api.herokuapp.com)
 - npm i moment -s
 - npm i jasmine --save-dev
 - npm i cors -s
+- npm i request -s
 
 ## TODO
 
