@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Keno API' });
+  res.render('index', { title: 'Purchasing Cryptocurrency App' });
 });
 
 module.exports = router;
